@@ -8,6 +8,8 @@ import {
   Car,
   CheckCircle,
   ExternalLink,
+  Instagram,
+  Facebook,
 } from 'lucide-react';
 import { restaurantData } from '../data/restaurantData';
 
@@ -151,6 +153,44 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 <Calendar className="w-3.5 h-3.5 text-[#C5A059]" />
                 <span>Reserve Salon Table</span>
               </button>
+
+              {/* Social Channels: Instagram, Facebook, TikTok */}
+              <div className="col-span-2 pt-2 flex items-center justify-between border-t border-[#C5A059]/15">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#C5A059]/80 font-medium">
+                  Official Channels:
+                </span>
+                <div className="flex items-center space-x-2">
+                  <a
+                    href={restaurantData.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="w-8 h-8 rounded bg-[#070B09] hover:bg-[#C5A059] border border-[#C5A059]/30 hover:border-[#C5A059] text-[#C5A059] hover:text-[#070B09] flex items-center justify-center transition-all group"
+                  >
+                    <Instagram className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a
+                    href={restaurantData.socials.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="w-8 h-8 rounded bg-[#070B09] hover:bg-[#C5A059] border border-[#C5A059]/30 hover:border-[#C5A059] text-[#C5A059] hover:text-[#070B09] flex items-center justify-center transition-all group"
+                  >
+                    <Facebook className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a
+                    href={restaurantData.socials.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                    className="w-8 h-8 rounded bg-[#070B09] hover:bg-[#C5A059] border border-[#C5A059]/30 hover:border-[#C5A059] text-[#C5A059] hover:text-[#070B09] flex items-center justify-center transition-all group"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.32V8.75a8.16 8.16 0 0 0 4.91 1.62V6.91a4.9 4.9 0 0 1-1-.22z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

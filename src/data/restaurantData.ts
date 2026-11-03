@@ -36,6 +36,7 @@ export interface RestaurantInfo {
   socials: {
     instagram: string;
     facebook: string;
+    tiktok: string;
   };
   steakSauces: string[];
   amenities: string[];
@@ -48,10 +49,10 @@ export const restaurantData: RestaurantInfo = {
   eyebrow: "MCMXCIV · TÜRKLER · ALANYA",
   headline: "THE ART OF DRY-AGED BEEF & MEDITERRANEAN GASTRONOMY",
   subheadline: "An extraordinary gastronomic sanctuary where 45-day Himalayan salt-aged British cuts, tableside carving mastery, and Mediterranean seafood converge under twilight Turkish skies.",
-  logoUrl: "/public/assets/aistudio/662062279_1565494492250399_5201436733719656398_n_7b0b9a48.jpg",
-  realTerracePhotoUrl: "/public/assets/aistudio/603752475_1472498971549952_7593596984536932200_n__1__0493efb5.jpg",
-  foodMenuPhotoUrl: "/public/assets/aistudio/632933134_1520100843456431_7241556113060499993_n_452e020b.jpg",
-  drinksMenuPhotoUrl: "/public/assets/aistudio/658773953_1559876412812207_2444740381900634416_n_4739a148.jpg",
+  logoUrl: "/assets/aistudio/662062279_1565494492250399_5201436733719656398_n_7b0b9a48.jpg",
+  realTerracePhotoUrl: "/assets/aistudio/603752475_1472498971549952_7593596984536932200_n__1__0493efb5.jpg",
+  foodMenuPhotoUrl: "/assets/aistudio/632933134_1520100843456431_7241556113060499993_n_452e020b.jpg",
+  drinksMenuPhotoUrl: "/assets/aistudio/658773953_1559876412812207_2444740381900634416_n_4739a148.jpg",
   ribeyeHeroUrl: "/src/assets/images/michelin_prime_ribeye_steak_1793658924853.jpg",
   tomahawkHeroUrl: "/src/assets/images/michelin_tomahawk_board_1793658926040.jpg",
   cellarHeroUrl: "/src/assets/images/michelin_cellar_cocktails_1793658927891.jpg",
@@ -84,6 +85,7 @@ export const restaurantData: RestaurantInfo = {
   socials: {
     instagram: "https://www.instagram.com/explore/locations/green-heaven-restaurant-turkler/",
     facebook: "https://www.facebook.com/greenheaventurkler/",
+    tiktok: "https://www.tiktok.com/@greenheaventurkler",
   },
   steakSauces: [
     "Green Peppercorn Cognac Glaze",

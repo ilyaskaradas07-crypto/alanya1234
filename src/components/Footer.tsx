@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Clock, ShieldCheck, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, Clock, ShieldCheck, ArrowUp, Instagram, Facebook } from 'lucide-react';
 import { restaurantData } from '../data/restaurantData';
 
 interface FooterProps {
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenReservation }) => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-[#C5A059]/15">
           
-          {/* Brand Col with Official Crest */}
+          {/* Brand Col with Official Crest & Social Media */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center space-x-3.5">
               <div className="w-10 h-10 rounded-full overflow-hidden border border-[#C5A059]/60 p-0.5 bg-[#070B09]">
@@ -61,6 +61,53 @@ export const Footer: React.FC<FooterProps> = ({ onOpenReservation }) => {
 
             <div className="pt-2 text-xs text-[#C5A059]/80 font-mono">
               Atatürk Caddesi, Pazar Sitesi No: 5H D:F, Türkler, Alanya
+            </div>
+
+            {/* Social Media Links: Instagram, Facebook, TikTok */}
+            <div className="pt-3">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-[#C5A059] font-semibold mb-2.5">
+                Social Media &amp; Updates
+              </div>
+              <div className="flex items-center space-x-3">
+                <a
+                  href={restaurantData.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Green Heaven on Instagram"
+                  className="group flex items-center space-x-2 bg-[#0D1B15] hover:bg-[#C5A059] border border-[#C5A059]/40 hover:border-[#C5A059] px-3 py-1.5 transition-all duration-300 text-xs text-[#E5DDD0]/80 hover:text-[#070B09]"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-[#C5A059] group-hover:text-[#070B09] transition-colors" />
+                  <span className="font-medium tracking-wider text-[11px]">Instagram</span>
+                </a>
+
+                <a
+                  href={restaurantData.socials.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Green Heaven on Facebook"
+                  className="group flex items-center space-x-2 bg-[#0D1B15] hover:bg-[#C5A059] border border-[#C5A059]/40 hover:border-[#C5A059] px-3 py-1.5 transition-all duration-300 text-xs text-[#E5DDD0]/80 hover:text-[#070B09]"
+                >
+                  <Facebook className="w-3.5 h-3.5 text-[#C5A059] group-hover:text-[#070B09] transition-colors" />
+                  <span className="font-medium tracking-wider text-[11px]">Facebook</span>
+                </a>
+
+                <a
+                  href={restaurantData.socials.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Green Heaven on TikTok"
+                  className="group flex items-center space-x-2 bg-[#0D1B15] hover:bg-[#C5A059] border border-[#C5A059]/40 hover:border-[#C5A059] px-3 py-1.5 transition-all duration-300 text-xs text-[#E5DDD0]/80 hover:text-[#070B09]"
+                >
+                  <svg
+                    className="w-3.5 h-3.5 fill-[#C5A059] group-hover:fill-[#070B09] transition-colors"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.32V8.75a8.16 8.16 0 0 0 4.91 1.62V6.91a4.9 4.9 0 0 1-1-.22z"/>
+                  </svg>
+                  <span className="font-medium tracking-wider text-[11px]">TikTok</span>
+                </a>
+              </div>
             </div>
           </div>
 

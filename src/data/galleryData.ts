@@ -22,7 +22,7 @@ export const galleryItems: GalleryItem[] = [
     title: 'Green Heaven Outdoor Terrace & Neon Pub',
     category: 'Group Gatherings',
     description: 'The authentic bustling outdoor terrace in Türkler with neon "GREEN HEAVEN STEAK HOUSE PUB" and evening entertainment banner.',
-    imageUrl: '/public/assets/aistudio/603752475_1472498971549952_7593596984536932200_n__1__0493efb5.jpg',
+    imageUrl: '/assets/aistudio/603752475_1472498971549952_7593596984536932200_n__1__0493efb5.jpg',
     isAuthenticAsset: true,
   },
   {
@@ -65,7 +65,7 @@ export const galleryItems: GalleryItem[] = [
     title: 'Official Printed Food Menu Board (Items 1–67)',
     category: 'Official Menus',
     description: 'The physical menu board preserved from Türkler listing Steak Specials, Seafood, Turkish grills, and Indian specialties.',
-    imageUrl: '/public/assets/aistudio/632933134_1520100843456431_7241556113060499993_n_452e020b.jpg',
+    imageUrl: '/assets/aistudio/632933134_1520100843456431_7241556113060499993_n_452e020b.jpg',
     isAuthenticAsset: true,
   },
   {
@@ -73,7 +73,7 @@ export const galleryItems: GalleryItem[] = [
     title: 'Official Printed Drinks & Cocktails Board',
     category: 'Official Menus',
     description: 'The physical drinks board with Draught Guinness, European beers, 24+ signature cocktails, and party aquariums.',
-    imageUrl: '/public/assets/aistudio/658773953_1559876412812207_2444740381900634416_n_4739a148.jpg',
+    imageUrl: '/assets/aistudio/658773953_1559876412812207_2444740381900634416_n_4739a148.jpg',
     isAuthenticAsset: true,
   },
   {
@@ -109,7 +109,7 @@ export const galleryItems: GalleryItem[] = [
     title: 'Official Green Heaven Crest & Brand Emblem',
     category: 'Official Menus',
     description: 'The gold palm and sunset insignia of Green Heaven Restaurant Steak House Sport Bar.',
-    imageUrl: '/public/assets/aistudio/662062279_1565494492250399_5201436733719656398_n_7b0b9a48.jpg',
+    imageUrl: '/assets/aistudio/662062279_1565494492250399_5201436733719656398_n_7b0b9a48.jpg',
     isAuthenticAsset: true,
   },
 ];
