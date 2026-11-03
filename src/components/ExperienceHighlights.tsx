@@ -1,57 +1,57 @@
 import React from 'react';
-import { Users, Wine, Trophy, HeartHandshake } from 'lucide-react';
+import { Users, Wine, Trophy, Car, Heart } from 'lucide-react';
 import { restaurantData } from '../data/restaurantData';
 
 export const ExperienceHighlights: React.FC = () => {
   const experiences = [
     {
-      title: 'Dry-Aged Beef Mastery',
-      tagline: '35 to 45 days in Himalayan salt chambers.',
-      description: 'Hand-cut Ribeye, Tomahawk, and Chateaubriand steaks seared over open oak embers, basted with herb marrow butter and served with four classical reductions.',
+      title: 'Juicy Steaks & Dry-Aged Cuts',
+      tagline: 'Flame-grilled prime beef just the way you like it.',
+      description: 'Hand-cut Ribeye, Tomahawk, T-Bone, and tenderloin fillet steaks, flame-grilled and served with seasoned fries and homemade sauces.',
       image: restaurantData.ribeyeHeroUrl,
       icon: Users,
     },
     {
-      title: 'Cellar Draughts & Single Malts',
-      tagline: 'Cellar-poured Guinness and rare Scotch.',
-      description: 'Chilled draught stout served at 6°C alongside single malts, reserve cocktails, and fine Mediterranean vintages on polished mahogany.',
+      title: 'Cold Draught Beers & Cocktails',
+      tagline: 'Ice-cold Guinness, lagers, and refreshing drinks.',
+      description: 'Crisp draught pints of Guinness, Carlsberg, Tuborg, and Efes, alongside single malt whiskeys and handcrafted tropical cocktails.',
       image: restaurantData.cellarHeroUrl,
       icon: Wine,
     },
     {
-      title: 'The Veranda Salon & Screenings',
-      tagline: 'Match day camaraderie and evening acoustics.',
-      description: 'High-definition stadium clarity broadcasts across our open-air terrace with live evening performances, dance showcases, and DJ performances.',
-      image: restaurantData.realTerracePhotoUrl,
+      title: 'Big-Screen Live Sports & Shows',
+      tagline: 'Cheer your team, enjoy live singers & karaoke.',
+      description: 'Watch Premier League & Champions League matches on open terrace HD screens, followed by live music performers and friendly karaoke every night.',
+      image: restaurantData.footballHeroUrl,
       icon: Trophy,
     },
     {
-      title: 'White-Glove Hospitality',
-      tagline: 'Complimentary private resort transfers.',
-      description: 'Door-to-door luxury shuttle service across all Türkler hotels, enclosed children’s garden playground, and genuine Turkish Mediterranean care.',
-      image: restaurantData.terraceHeroUrl,
-      icon: HeartHandshake,
+      title: 'Free Round-Trip Hotel Shuttle',
+      tagline: 'Door-to-door free pickup & return across Türkler.',
+      description: 'We pick your family up from your hotel lobby and drop you back safely. Plus an enclosed garden playground where children can play happily.',
+      image: restaurantData.familyDiningHeroUrl,
+      icon: Car,
     },
   ];
 
   return (
-    <section id="highlights" className="py-28 bg-[#09100C] relative">
+    <section id="highlights" className="py-24 bg-[#09100C] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3">
-            L'Excellence · Four Pillars of Hospitality
+            What Makes Us Special · Türkler, Alanya
           </div>
-          <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5EFE4] mb-4">
-            Curated For Distinguished Evenings
+          <h2 className="font-serif-luxury text-3xl sm:text-5xl font-normal text-[#F5EFE4] mb-4">
+            Everything For A Perfect Holiday Night
           </h2>
           <p className="text-sm sm:text-base text-[#E5DDD0]/80 font-light leading-relaxed font-serif-luxury italic max-w-xl mx-auto">
-            "Every facet of Green Heaven in Türkler is orchestrated for uncompromising culinary pleasure and relaxed coastal grandeur."
+            "Delicious food, cold drinks, big matches, fun music, and hassle-free round-trip hotel transfer for the whole family."
           </p>
         </div>
 
-        {/* 4 Editorial Cards Grid */}
+        {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {experiences.map((exp, idx) => {
             const Icon = exp.icon;
@@ -80,7 +80,7 @@ export const ExperienceHighlights: React.FC = () => {
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] text-[#C5A059] uppercase tracking-[0.2em] font-semibold block mb-1">
-                      0{idx + 1}. Pillar
+                      0{idx + 1}. Feature
                     </span>
                     <h3 className="font-serif-luxury text-xl font-normal text-[#F5EFE4] group-hover:text-[#C5A059] transition-colors mb-2">
                       {exp.title}

@@ -52,11 +52,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenReservation }) => {
             </div>
 
             <p className="text-xs uppercase tracking-[0.2em] text-[#C5A059] font-medium">
-              Haute Steakhouse · Mediterranean Catch · Private Cellar
+              Prime Steaks · Cold Draught Beers · Live Sports · Free Hotel Shuttle
             </p>
 
             <p className="text-xs text-[#E5DDD0]/70 leading-relaxed max-w-md font-light">
-              An epicurean sanctuary in Türkler, Alanya. Savoring Himalayan salt dry-aged beef cuts, authentic Mediterranean seafood, cellar draught stout at 6°C, and complimentary private resort transfers.
+              Delicious dry-aged steaks, ice-cold draught beers, big-screen football matches, family dining with kids playground, and complimentary round-trip hotel pickup in Türkler &amp; Payallar, Alanya.
             </p>
 
             <div className="pt-2 text-xs text-[#C5A059]/80 font-mono">

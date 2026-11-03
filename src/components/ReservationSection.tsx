@@ -45,7 +45,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
     privacyConsent: true,
   });
 
-  const [hotelShuttleNeeded, setHotelShuttleNeeded] = useState(false);
+  const [hotelShuttleNeeded, setHotelShuttleNeeded] = useState(true);
   const [hotelName, setHotelName] = useState('');
   const [errors, setErrors] = useState<Partial<Record<keyof ReservationFormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -146,15 +146,16 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3">
-            White-Glove Dining Concierge
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3 flex items-center justify-center gap-1.5">
+            <Car className="w-3.5 h-3.5 text-[#C5A059]" />
+            <span>Book Table &amp; Free Hotel Shuttle</span>
           </div>
           <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5EFE4] mb-4">
-            Table &amp; Salon Reservations
+            Table &amp; Free Shuttle Booking
           </h2>
           <p className="text-sm sm:text-base text-[#E5DDD0]/80 font-light leading-relaxed font-serif-luxury italic max-w-xl mx-auto">
-            "Secure your candlelit veranda table or private parlor booth. Complimentary resort chauffeur service available across all Türkler hotels."
+            "Reserve your table for delicious steaks, cold drinks, or match night. We provide free round-trip pickup &amp; return from your hotel lobby anywhere in Türkler &amp; Payallar!"
           </p>
 
           {/* Direct Instant Action Bar */}
@@ -173,7 +174,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
               className="inline-flex items-center space-x-2 bg-[#0D1B15] border border-[#C5A059]/40 hover:border-[#C5A059] text-[#C5A059] text-xs font-medium uppercase tracking-wider px-4 py-2.5 transition-all"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>Call Host Directly</span>
+              <span>Call Us Directly</span>
             </a>
           </div>
         </div>
@@ -467,8 +468,8 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
                 </div>
               </div>
 
-              {/* White-Glove Resort Chauffeur Option */}
-              <div className="bg-[#070B09] p-5 border border-[#C5A059]/30">
+              {/* Free Round-Trip Hotel Transfer Block */}
+              <div className="bg-[#070B09] p-5 border-2 border-[#C5A059] shadow-lg">
                 <label className="flex items-start space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -477,25 +478,31 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
                     className="mt-0.5 h-4 w-4 accent-[#C5A059]"
                   />
                   <div>
-                    <span className="text-xs uppercase tracking-[0.16em] text-[#F5EFE4] flex items-center font-semibold">
-                      <Car className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
-                      Request Complimentary Resort Chauffeur Transfer (Türkler &amp; Payallar)
+                    <span className="text-xs uppercase tracking-[0.16em] text-[#F5EFE4] flex items-center font-bold">
+                      <Car className="w-4 h-4 mr-2 text-[#C5A059]" />
+                      Free Round-Trip Hotel Transfer (Gidiş - Dönüş Ücretsiz Otel Servisi)
                     </span>
-                    <p className="text-[11px] text-[#E5DDD0]/70 mt-1 font-light">
-                      Green Heaven provides door-to-door private shuttle service for guests staying at Türkler resorts (e.g. Haydarpasha, Long Beach, Eftalia, Sirius Deluxe).
+                    <p className="text-[11px] text-[#E5DDD0]/85 mt-1 font-light">
+                      We pick you up directly from your hotel lobby anywhere in Türkler &amp; Payallar before your meal, and drive you back safely when you are ready!
                     </p>
                   </div>
                 </label>
 
                 {hotelShuttleNeeded && (
-                  <div className="mt-4 pl-7">
+                  <div className="mt-4 pl-7 space-y-2">
+                    <label className="block text-[11px] uppercase tracking-wider text-[#C5A059] font-medium">
+                      Your Hotel Name &amp; Room Number
+                    </label>
                     <input
                       type="text"
                       value={hotelName}
                       onChange={(e) => setHotelName(e.target.value)}
-                      placeholder="Please specify your resort name & room number (e.g. Haydarpasha Palace, Room 402)"
-                      className="w-full bg-[#0D1B15] border border-[#C5A059]/30 text-xs px-4 py-2.5 text-[#F5EFE4] focus:outline-none focus:border-[#C5A059]"
+                      placeholder="e.g. Long Beach Resort, Room 312 or Haydarpasha Palace"
+                      className="w-full bg-[#0D1B15] border border-[#C5A059]/40 text-xs px-4 py-3 text-[#F5EFE4] focus:outline-none focus:border-[#C5A059]"
                     />
+                    <p className="text-[10px] text-[#C5A059]/80 italic">
+                      ✓ Return transfer to your hotel will be arranged right from your table whenever your dinner is finished.
+                    </p>
                   </div>
                 )}
               </div>

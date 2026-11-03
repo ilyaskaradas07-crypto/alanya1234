@@ -8,16 +8,15 @@ export const ReviewsSection: React.FC = () => {
     <section id="reviews" className="py-28 bg-[#070B09] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3">
-            Critiques &amp; Guest Accolades
+            Guest Reviews &amp; Feedback
           </div>
-          <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5EFE4] mb-4">
-            Distinguished Guest Impressions
+          <h2 className="font-serif-luxury text-3xl sm:text-5xl font-normal text-[#F5EFE4] mb-3">
+            What Our Guests Say
           </h2>
           <p className="text-sm sm:text-base text-[#E5DDD0]/80 font-light leading-relaxed font-serif-luxury italic max-w-xl mx-auto">
-            "Reflections from international epicures, steak lovers, and British travelers dining at our Türkler tables."
+            "Real reviews from families, couples, and holidaymakers dining at Green Heaven in Türkler, Alanya."
           </p>
         </div>
 

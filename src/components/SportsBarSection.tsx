@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tv, Trophy, Users, Beer, Calendar, ShieldCheck, Flame } from 'lucide-react';
+import { Tv, Trophy, Users, Beer, Calendar, Music, Sparkles } from 'lucide-react';
 import { restaurantData } from '../data/restaurantData';
 
 interface SportsBarSectionProps {
@@ -13,23 +13,23 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
 }) => {
   const sportsFeatures = [
     {
-      title: 'Cellar Draught Guinness at 6°C',
-      desc: 'Poured with traditional two-part technique alongside chilled continental lagers: Efes, Tuborg, Carlsberg, Heineken, and Corona.',
+      title: 'Ice-Cold Draught Beers & Stouts',
+      desc: 'Cold Guinness draught, Efes, Tuborg, Carlsberg, Heineken, and Corona served crisp and refreshing in chilled glasses.',
       icon: Beer,
     },
     {
-      title: 'Private Lounge Screenings',
-      desc: 'Dedicated high-definition screens across the open-air garden terrace and indoor air-conditioned parlor with premium match audio.',
+      title: 'Big HD Screens Across Terrace',
+      desc: 'Crystal-clear screens positioned all around the garden terrace and indoor air-conditioned bar so you never miss a goal.',
       icon: Tv,
     },
     {
-      title: 'Curated Scotch & Single Malts',
-      desc: 'Extensive whiskey reserve including Jack Daniel\'s, Chivas Regal, Jameson, Black Label, Ballantine\'s, and artisan cocktails.',
+      title: 'Whiskeys & Tropical Cocktails',
+      desc: 'Full selection of popular whiskeys (Jack Daniel\'s, Chivas, Jameson, Red Label) and over 24 exotic cocktails and party aquariums.',
       icon: Trophy,
     },
     {
-      title: 'International Match Atmosphere',
-      desc: 'An inviting, dignified environment where supporters of all premier sporting clubs gather to enjoy camaraderie and culinary excellence.',
+      title: 'Friendly Match-Day Atmosphere',
+      desc: 'A fun, welcoming pub atmosphere where holidaymakers and football fans from all countries watch together and celebrate.',
       icon: Users,
     },
   ];
@@ -38,28 +38,28 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
     'Premier League',
     'UEFA Champions League',
     'La Liga',
-    'Formula 1 Grand Prix',
-    'Six Nations Rugby',
-    'EuroLeague Basketball',
-    'International Friendlies',
+    'Bundesliga',
+    'Formula 1',
+    'Rugby & Boxing',
+    'International Tournaments',
   ];
 
   return (
-    <section id="sports-bar" className="py-28 bg-[#09100C] relative overflow-hidden">
+    <section id="sports-bar" className="py-24 bg-[#09100C] relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3">
-            The Cellar &amp; Parlor · Draughts &amp; Screenings
+            Sports Pub &amp; Draught Beers · Türkler, Alanya
           </div>
 
           <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5EFE4] mb-4 leading-tight">
-            The Cellar Reserve &amp; Sports Salon
+            Live Sports Pub &amp; Draught Beer
           </h2>
 
           <p className="text-sm sm:text-base text-[#E5DDD0]/80 font-light leading-relaxed font-serif-luxury italic max-w-xl mx-auto">
-            "A distinguished British club sanctuary where cellar-poured stouts, single malts, and world championship broadcasts unfold in Türkler."
+            "Watch your favourite football team on big screens with cold draught pints, juicy burgers, and friendly fans on our open terrace."
           </p>
         </div>
 
@@ -69,8 +69,8 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
           {/* Card 1: Live Football & Match-Day Cheering */}
           <div className="relative border border-[#C5A059]/40 shadow-2xl overflow-hidden bg-[#070B09] group min-h-[360px] flex flex-col justify-end">
             <img
-              src="/src/assets/images/football_fans_match_day_1793659790725.jpg"
-              alt="Premier League & European Football Match Day at Green Heaven Türkler"
+              src={restaurantData.footballHeroUrl}
+              alt="Live Premier League & Football Match Day at Green Heaven Türkler"
               className="absolute inset-0 w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
@@ -85,7 +85,7 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
                 Live Football Match Day Atmosphere
               </h3>
               <p className="text-xs text-[#E5DDD0]/85 font-light leading-relaxed max-w-md">
-                Cheer your club with international fans on our open terrace. Multiple high-clarity big screens, pristine match sound, and ice-cold draught pints delivered straight to your table.
+                Cheer your club with international fans on our open terrace. Multiple high-clarity big screens, great match commentary, and ice-cold draught pints served right to your table.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
           {/* Card 2: Evening Live Entertainment, Singer & Karaoke */}
           <div className="relative border border-[#C5A059]/40 shadow-2xl overflow-hidden bg-[#070B09] group min-h-[360px] flex flex-col justify-end">
             <img
-              src="/src/assets/images/karaoke_live_entertainment_1793659791419.jpg"
+              src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
               alt="Live Music, Evening Entertainment and Karaoke at Green Heaven"
               className="absolute inset-0 w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
@@ -102,14 +102,14 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
             
             <div className="relative z-10 p-6 sm:p-8">
               <div className="inline-flex items-center space-x-2 bg-[#0D1B15] border border-[#C5A059] text-[#C5A059] text-[10px] uppercase font-bold tracking-[0.2em] px-2.5 py-1 mb-3">
-                <Users className="w-3 h-3" />
+                <Music className="w-3 h-3" />
                 <span>Every Evening · Shows &amp; Karaoke</span>
               </div>
               <h3 className="font-serif-luxury text-2xl sm:text-3xl font-normal text-[#F5EFE4] mb-2">
-                Live Music, Dance &amp; Group Gatherings
+                Live Music, Dance &amp; Karaoke Fun
               </h3>
               <p className="text-xs text-[#E5DDD0]/85 font-light leading-relaxed max-w-md">
-                Acoustic musicians, professional stage shows, lively karaoke nights, and birthday toasts beneath glowing festoon lights on the palm veranda.
+                Acoustic musicians, professional stage shows, lively karaoke nights, and holiday toasts beneath glowing lights on the palm terrace.
               </p>
             </div>
           </div>
@@ -139,43 +139,33 @@ export const SportsBarSection: React.FC<SportsBarSectionProps> = ({
           })}
         </div>
 
-        {/* Competitions Broadcasted */}
-        <div className="bg-[#0D1B15] border border-[#C5A059]/25 p-6 mb-12 shadow-xl">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="flex items-center space-x-2 text-xs uppercase tracking-[0.18em] text-[#C5A059] font-medium shrink-0">
-              <Flame className="w-3.5 h-3.5" />
-              <span>Broadcast Calendar:</span>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
+        {/* League Bar & CTAs */}
+        <div className="bg-[#070B09] border border-[#C5A059]/30 p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <span className="text-[10px] text-[#C5A059] uppercase tracking-[0.25em] font-semibold block mb-1">
+              Live Broadcast Schedule
+            </span>
+            <div className="flex flex-wrap items-center gap-2 mt-1">
               {popularLeagues.map((league) => (
                 <span
                   key={league}
-                  className="text-xs bg-[#070B09] text-[#E5DDD0]/80 px-3 py-1 border border-[#C5A059]/15 font-light"
+                  className="text-xs bg-[#0D1B15] border border-[#C5A059]/20 text-[#E5DDD0]/90 px-2.5 py-1"
                 >
                   {league}
                 </span>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Match Day CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={onBookMatchDay}
-            className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#C5A059] hover:bg-[#DFC28D] text-[#070B09] font-bold text-xs tracking-[0.18em] uppercase px-8 py-4 shadow-xl transition-all cursor-pointer"
-          >
-            <Calendar className="w-4 h-4" />
-            <span>Reserve For Match Day</span>
-          </button>
-
-          <button
-            onClick={onPlanVisit}
-            className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-transparent hover:bg-[#0D1B15] text-[#F5EFE4] font-medium text-xs tracking-[0.16em] uppercase px-8 py-4 border border-[#C5A059]/30 transition-colors cursor-pointer"
-          >
-            <span>Inquire Group &amp; Terrace Booths</span>
-          </button>
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={onBookMatchDay}
+              className="inline-flex items-center space-x-2 bg-[#C5A059] hover:bg-[#DFC28D] text-[#070B09] font-bold text-xs uppercase tracking-[0.16em] px-6 py-3 transition-colors cursor-pointer"
+            >
+              <Calendar className="w-3.5 h-3.5" />
+              <span>Reserve Match Table</span>
+            </button>
+          </div>
         </div>
 
       </div>

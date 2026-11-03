@@ -10,6 +10,7 @@ import {
   ExternalLink,
   Instagram,
   Facebook,
+  Sparkles,
 } from 'lucide-react';
 import { restaurantData } from '../data/restaurantData';
 
@@ -21,20 +22,69 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
   onBookTable,
 }) => {
   return (
-    <section id="location" className="py-28 bg-[#09100C] relative overflow-hidden">
+    <section id="contact" className="py-24 bg-[#09100C] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3">
-            Concierge &amp; Coordinates · Türkler, Alanya
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-medium mb-3 flex items-center justify-center gap-1.5">
+            <Car className="w-3.5 h-3.5 text-[#C5A059]" />
+            <span>Free Round-Trip Hotel Transfer &amp; Location</span>
           </div>
           <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5EFE4] mb-4">
-            Salon Location &amp; Inquiries
+            Visit Us in Türkler, Alanya
           </h2>
           <p className="text-sm sm:text-base text-[#E5DDD0]/80 font-light leading-relaxed font-serif-luxury italic max-w-xl mx-auto">
-            "Conveniently situated along Atatürk Caddesi in Türkler, offering direct road access and private chauffeur transfers across the region."
+            "Directly on Atatürk Caddesi in Türkler. Free round-trip pickup &amp; return from your hotel lobby."
           </p>
+        </div>
+
+        {/* Free Round-Trip Hotel Shuttle Banner */}
+        <div className="mb-10 bg-[#0D1B15] border-2 border-[#C5A059] p-6 shadow-2xl relative">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="flex items-center space-x-2 text-[#C5A059]">
+                <Car className="w-5 h-5 text-[#C5A059]" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em]">
+                  Gidiş - Dönüş Ücretsiz Otel Servisi
+                </span>
+              </div>
+              <h3 className="font-serif-luxury text-2xl sm:text-3xl font-normal text-[#F5EFE4]">
+                Free Round-Trip Hotel Transfer (Pickup &amp; Return)
+              </h3>
+              <p className="text-xs sm:text-sm text-[#E5DDD0]/85 font-light leading-relaxed">
+                Staying at a resort in Türkler, Payallar, or nearby? Don't worry about taxis! We will pick you and your family up from your hotel lobby and drop you back safely after your meal.
+              </p>
+              <div className="flex flex-wrap gap-2 pt-2">
+                {restaurantData.freeShuttleInfo.coverage.map((hotel, idx) => (
+                  <span
+                    key={idx}
+                    className="text-[11px] bg-[#070B09] border border-[#C5A059]/30 text-[#E5DDD0]/90 px-2.5 py-1"
+                  >
+                    ✓ {hotel}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0">
+              <button
+                onClick={onBookTable}
+                className="inline-flex items-center justify-center space-x-2 bg-[#C5A059] hover:bg-[#DFC28D] text-[#070B09] font-bold text-xs uppercase tracking-[0.16em] px-6 py-3.5 shadow-lg transition-all cursor-pointer"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book Table &amp; Shuttle</span>
+              </button>
+              <a
+                href={restaurantData.whatsappDirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-xs uppercase tracking-[0.14em] px-6 py-3.5 shadow transition-all"
+              >
+                <span>WhatsApp Transfer Desk</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Two-Column Composition */}
@@ -45,10 +95,10 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
             <div className="space-y-6">
               <div className="pb-4 border-b border-[#C5A059]/20">
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-semibold block mb-1">
-                  Haute Steakhouse &amp; Pub
+                  Steak House &amp; Sports Pub
                 </span>
                 <h3 className="font-serif-luxury text-2xl sm:text-3xl font-normal text-[#F5EFE4]">
-                  Green Heaven
+                  Green Heaven Türkler
                 </h3>
                 <p className="text-xs text-[#E5DDD0]/60 tracking-wider uppercase font-light">
                   Türkler Mahallesi · Alanya / Antalya
@@ -62,7 +112,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 </div>
                 <div>
                   <h4 className="text-[11px] uppercase tracking-[0.16em] text-[#C5A059] font-medium mb-1">
-                    Geographic Coordinates
+                    Restaurant Address
                   </h4>
                   <p className="text-xs font-medium text-[#F5EFE4] leading-relaxed">
                     {restaurantData.address.street}, {restaurantData.address.site}
@@ -80,7 +130,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 </div>
                 <div>
                   <h4 className="text-[11px] uppercase tracking-[0.16em] text-[#C5A059] font-medium mb-1">
-                    Direct Concierge &amp; WhatsApp
+                    Phone &amp; WhatsApp
                   </h4>
                   <a
                     href={`tel:${restaurantData.phoneRaw}`}
@@ -89,7 +139,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                     {restaurantData.phoneDisplay}
                   </a>
                   <p className="text-[11px] text-[#E5DDD0]/60 mt-0.5 font-light">
-                    English &amp; Turkish speaking reservation desk
+                    English &amp; Turkish speaking team
                   </p>
                 </div>
               </div>
@@ -101,28 +151,20 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 </div>
                 <div>
                   <h4 className="text-[11px] uppercase tracking-[0.16em] text-[#C5A059] font-medium mb-1">
-                    Hours of Service
+                    Opening Hours
                   </h4>
                   <p className="text-xs font-medium text-[#F5EFE4]">
                     {restaurantData.openingHours}
                   </p>
                   <div className="space-y-0.5 mt-2 text-xs text-[#E5DDD0]/65 font-light">
                     {restaurantData.openingHoursDetails.map((item, idx) => (
-                      <div key={idx} className="flex justify-between w-52">
+                      <div key={idx} className="flex justify-between w-56">
                         <span>{item.days}:</span>
                         <span className="text-[#F5EFE4] font-medium">{item.hours}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-
-              {/* Free Shuttle Highlight */}
-              <div className="p-3.5 bg-[#070B09] border border-[#C5A059]/25 flex items-center space-x-3 text-xs text-[#E5DDD0]/85 font-light">
-                <Car className="w-4 h-4 text-[#C5A059] shrink-0" />
-                <span>
-                  Complimentary resort pickup &amp; return across all Türkler hotels upon reservation.
-                </span>
               </div>
             </div>
 
@@ -133,7 +175,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 className="flex items-center justify-center space-x-2 bg-[#070B09] hover:bg-[#12241C] text-[#C5A059] border border-[#C5A059]/40 font-semibold text-xs uppercase tracking-wider py-3 px-4 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>Call Desk</span>
+                <span>Call Us</span>
               </a>
 
               <a
@@ -151,13 +193,13 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                 className="col-span-2 flex items-center justify-center space-x-2 bg-transparent hover:bg-[#070B09] text-[#F5EFE4] border border-[#C5A059]/30 font-medium text-xs uppercase tracking-[0.16em] py-3.5 px-4 transition-colors cursor-pointer"
               >
                 <Calendar className="w-3.5 h-3.5 text-[#C5A059]" />
-                <span>Reserve Salon Table</span>
+                <span>Book Table &amp; Shuttle</span>
               </button>
 
               {/* Social Channels: Instagram, Facebook, TikTok */}
               <div className="col-span-2 pt-2 flex items-center justify-between border-t border-[#C5A059]/15">
                 <span className="text-[10px] uppercase tracking-[0.2em] text-[#C5A059]/80 font-medium">
-                  Official Channels:
+                  Follow Us:
                 </span>
                 <div className="flex items-center space-x-2">
                   <a
@@ -209,7 +251,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
               <div className="p-4 bg-[#0D1B15] border-t border-[#C5A059]/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                 <div className="flex items-center space-x-2 text-[#E5DDD0]/70 font-light">
                   <CheckCircle className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Verified Türkler location (Atatürk Cad. Pazar Sitesi No: 5H)</span>
+                  <span>Türkler location: Atatürk Cad. Pazar Sitesi No: 5H D:F</span>
                 </div>
 
                 <a
@@ -218,7 +260,7 @@ export const LocationContactSection: React.FC<LocationContactSectionProps> = ({
                   rel="noopener noreferrer"
                   className="text-[#C5A059] hover:text-[#F5EFE4] font-medium flex items-center space-x-1 uppercase tracking-wider"
                 >
-                  <span>Google Maps App</span>
+                  <span>Open Google Maps</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
